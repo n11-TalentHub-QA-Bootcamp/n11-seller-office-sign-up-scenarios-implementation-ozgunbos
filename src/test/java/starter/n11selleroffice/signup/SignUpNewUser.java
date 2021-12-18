@@ -26,7 +26,7 @@ public class SignUpNewUser implements Task {
     private final String username_text;
     private final String repassword_text;
     private final String reemail_text;
-    private final String storname_text;
+    private final String storename_text;
 
 
     @Step("{0} Signup with some informations'")
@@ -58,7 +58,7 @@ public class SignUpNewUser implements Task {
 
                 Click.on(n11SellerOfficeSignUpPageElements.STORENAME_FIELD),
                 WaitUntil.the(n11SellerOfficeSignUpPageElements.STORENAME_FIELD,isVisible()).forNoMoreThan(5).seconds(),
-                SendKeys.of(this.storname_text).into(n11SellerOfficeSignUpPageElements.STORENAME_FIELD),
+                SendKeys.of(this.storename_text).into(n11SellerOfficeSignUpPageElements.STORENAME_FIELD),
 
                 WaitUntil.the(n11SellerOfficeSignUpPageElements.SIGNUP_BTN,isClickable()).forNoMoreThan(5).seconds(),
                 Click.on(n11SellerOfficeSignUpPageElements.SIGNUP_BTN),
@@ -71,20 +71,20 @@ public class SignUpNewUser implements Task {
 
     }
 
-    public SignUpNewUser(String username_text, String password_text,String repassword_text, String email_text, String reemail_text, String storname_text){
+    public SignUpNewUser(String username_text, String password_text,String repassword_text, String email_text, String reemail_text, String storename_text){
         this.username_text = username_text;
         this.password_text = password_text;
         this.repassword_text = repassword_text;
         this.email_text = email_text;
         this.reemail_text = reemail_text;
-        this.storname_text = storname_text;
+        this.storename_text = storename_text;
 
     }
 
 
 
-    public static SignUpNewUser SignUpThePage(String username_text, String password_text,String repassword_text, String email_text, String reemail_text, String storname_text) {
+    public static SignUpNewUser SignUpThePage(String username_text, String password_text,String repassword_text, String email_text, String reemail_text, String storename_text) {
         return instrumented(SignUpNewUser.class,
-                username_text,password_text,repassword_text, email_text, reemail_text, storname_text);
+                username_text,password_text,repassword_text, email_text, reemail_text, storename_text);
     }
 }
