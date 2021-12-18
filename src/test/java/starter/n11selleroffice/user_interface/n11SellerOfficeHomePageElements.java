@@ -5,5 +5,5 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 public class n11SellerOfficeHomePageElements {
 
-    public static Target LOGIN_LINK = Target.the("login link").locatedBy(".btnSignIn");
+    public static Target SIGNUP_LINK = Target.the("signup link").locatedBy("//a[@id='registerNow']");
 }
